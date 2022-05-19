@@ -1,0 +1,22 @@
+ ListNode* middleNode(ListNode* head) {
+        ListNode * temp = head;
+        int length = 0;
+        while(temp!= 0)
+        {
+            length++;
+            temp = temp->next;
+        }
+        int n = (length/2);
+        int i=0;
+        temp =head;
+        while(i < n)
+        {
+            temp = temp->next;
+            i++;
+        }
+        return temp;
+    }
+    // time comlexity - O(n) + O(n/2)
+    
+    // method 2  - slow and fast pointer - when they will be equal that will be the mid point
+    
